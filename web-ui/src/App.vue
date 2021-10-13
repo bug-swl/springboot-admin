@@ -1,11 +1,32 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="container">
+    <Sidebar class="side-bar"/>
+    <div class="main">
+      <Header/>
+      <router-view/>
+    </div>
   </div>
-  <router-view/>
 </template>
+<script>
+import Header from "@/components/Header"
+import Sidebar from "@/components/Sidebar"
+import {ref} from "vue"
 
+export default {
+  name: "Layout",
+  components: {
+    Header,
+    Sidebar
+  },
+  provide() {
+    return {
+      isCollapse: ref(false)
+    }
+  }
+
+}
+
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -13,10 +34,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 14px;
 }
 
 #nav {
-  padding: 30px;
+  //padding: 30px;
 
   a {
     font-weight: bold;
@@ -27,4 +49,22 @@
     }
   }
 }
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .side-bar {
+    //border-right: 1px solid #ccc;
+    text-align: left;
+  }
+
+  .main {
+    flex: 1;
+
+  }
+}
+
+
 </style>
