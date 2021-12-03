@@ -1,18 +1,19 @@
 <template>
-  <!--        <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">-->
-  <!--          <el-radio-button :label="false">expand</el-radio-button>-->
-  <!--          <el-radio-button :label="true">collapse</el-radio-button>-->
-  <!--        </el-radio-group>-->
+  <!--      <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">-->
+  <!--        <el-radio-button :label="false">expand</el-radio-button>-->
+  <!--        <el-radio-button :label="true">collapse</el-radio-button>-->
+  <!--      </el-radio-group>-->
   <div>
+
+
     <el-menu
       default-active="user"
       class="el-menu-vertical"
       :collapse="isCollapse"
       @open="handleOpen"
       @close="handleClose"
-      router
     >
-      <el-menu-item index="home">
+      <el-menu-item index="1">
         <el-icon>
           <el-icon-home-filled/>
         </el-icon>
@@ -52,29 +53,6 @@ export default {
   setup () {
     const isCollapse = inject('isCollapse')
     const title = ref('Derik后台管理系统')
-    const menuList = ref([
-      {
-        title: "DERIK",
-        name: 'Home',
-        icon: 'el-icon-home',
-        path: '/home',
-      },
-      {
-        title: '系统管理',
-        name: 'SysManage',
-        icon: 'el-icon-operation',
-        path: '',
-        children: [
-          {
-            title: '用户管理',
-            name: 'User',
-            icon: 'el-icon-user',
-            path: '/sys/user',
-          }
-        ]
-      }
-    ])
-
     const handleOpen = (key, keyPath) => {
       console.log(key, keyPath)
     }
@@ -84,7 +62,6 @@ export default {
     return {
       isCollapse,
       title,
-      menuList,
       handleOpen,
       handleClose,
     }
@@ -111,7 +88,7 @@ export default {
 
 .el-menu-vertical {
   text-align: left;
-  height: 100vh;
+  height: calc(100vh - 50px);
 
 }
 

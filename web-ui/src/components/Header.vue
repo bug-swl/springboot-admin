@@ -1,7 +1,12 @@
 <template>
   <div style="height: 50px;line-height: 50px;border-bottom: 1px solid #ccc;display: flex">
     <div class="header-left">
-      <el-button @click="collapse">侧边收缩</el-button>
+      <span class="collapse">
+        <el-icon :size="20" @click="collapse">
+          <el-icon-fold v-if="!isCollapse"/>
+          <el-icon-expand v-if="isCollapse"/>
+        </el-icon>
+      </span>
     </div>
     <div class="header-middle"></div>
     <div class="header-right">
@@ -25,30 +30,44 @@
 </template>
 
 <script>
+import { Fold } from '@element-plus/icons'
+
 export default {
-  name: "Header",
-  data() {
+  name: 'Header',
+  data () {
     return {
       user: {
-        username: "张三"
+        username: '张三'
       }
     }
   },
-  methods:{
-    collapse() {
-      console.log(this.isCollapse)
-      this.isCollapse.value =!this.isCollapse.value
+  components: {
+    Fold
+  },
+  methods: {
+    collapse () {
+      this.isCollapse = !this.isCollapse
     }
   },
-  inject:['isCollapse']
+  inject: ['isCollapse']
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .header-left {
   width: 200px;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+
+  .collapse {
+    height: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .header-middle {
