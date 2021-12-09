@@ -6,7 +6,7 @@ const routes = [
     // alias: '/sys',
     name: 'Layout',
     component: () => import('@/components/Layout'),
-    redirect: '/sys/user',
+    redirect: '/user',
     children: [
       {
         path: 'user',

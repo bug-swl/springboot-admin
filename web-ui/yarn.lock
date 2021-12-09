@@ -1581,18 +1581,18 @@
   resolved "https://registry.yarnpkg.com/@vue/web-component-wrapper/-/web-component-wrapper-1.3.0.tgz#b6b40a7625429d2bd7c2281ddba601ed05dc7f1a"
   integrity sha512-Iu8Tbg3f+emIIMmI2ycSI8QcEuAUgPTgHwesDU1eKMLE4YC/c/sFbGc70QgMq31ijRftV0R7vCm9co6rldCeOA==
 
-"@vueuse/core@^6.7.3":
-  version "6.9.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-6.9.2.tgz#76b16d01f33cf367dd1a2d7f2e31d106443ceb8a"
-  integrity sha512-FRwl4ccSFuHZBHLGgS9TMv/+Dd6XFaL4o9nph2qtgQIV+z29RBFokw08XjHfykiENRzB01MjYHJ7iRUnsIFQXg==
+"@vueuse/core@^7.0.0":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-7.2.2.tgz#8e563766cfeeef12f4c7d07307348a2c10be9875"
+  integrity sha512-T9oksrPflNhsgG/Y/7IeCSmITPZ0VKDnTpK8y7SQl4ZIdLIL8L7fJyhJEgSMWyo497j/XK3RKFkOTh4GFTVeIQ==
   dependencies:
-    "@vueuse/shared" "6.9.2"
+    "@vueuse/shared" "7.2.2"
     vue-demi "*"
 
-"@vueuse/shared@6.9.2":
-  version "6.9.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-6.9.2.tgz#97e4369fa7262ebc96fe1d6e210268f30b037005"
-  integrity sha512-lAiMh6XROs0kSKVd0Yb/6GKoQMxC1fYrFDi6opvQWISPtcqRNluRrQxLUZ3WTI78ovtoKRLktjhkFAtydcfFDg==
+"@vueuse/shared@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-7.2.2.tgz#12f2698d3b6470843823ae478bd8db42f05145c7"
+  integrity sha512-9vevEvvQgx4snSrDfZ5BFd7FmlIl9rwTtr8ySzPZhZQslx6lbcsXK3Q97I06Fv8S2TedR//X9fn2QbNtbFmdog==
   dependencies:
     vue-demi "*"
 
@@ -3749,19 +3749,19 @@ elegant-spinner@^1.0.1:
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
   integrity sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=
 
-element-plus@1.2.0-beta.2:
-  version "1.2.0-beta.2"
-  resolved "https://registry.yarnpkg.com/element-plus/-/element-plus-1.2.0-beta.2.tgz#f6c6093405cce55fad45f08d15b8a92dfa72e9c3"
-  integrity sha512-A5HpcpgcpoZZgVpAm1fy7sLb5zQj/tafhcJqD7avc4v3NgWDqSa58CNp5B7fpvVhXihRGWssqQjnTh2VczGGfw==
+element-plus@^1.2.0-beta.2:
+  version "1.2.0-beta.5"
+  resolved "https://registry.yarnpkg.com/element-plus/-/element-plus-1.2.0-beta.5.tgz#ef4498c2d051a122cf5898189f4215129bb368bb"
+  integrity sha512-8KNGsNZ6RjVJ7kmxq/WLeTBMhVxSjfaGdW2QdcdXz4km1MgxbyBfdiNGVQG4XH/n+hbtLFldCPw0mVT4vkncuA==
   dependencies:
     "@element-plus/icons" "^0.0.11"
     "@popperjs/core" "^2.10.2"
-    "@vueuse/core" "^6.7.3"
+    "@vueuse/core" "^7.0.0"
     async-validator "^4.0.7"
     dayjs "^1.10.7"
     lodash "^4.17.21"
     memoize-one "^6.0.0"
-    normalize-wheel-es "^1.1.0"
+    normalize-wheel-es "^1.1.1"
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -6737,7 +6737,7 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
-normalize-wheel-es@^1.1.0:
+normalize-wheel-es@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/normalize-wheel-es/-/normalize-wheel-es-1.1.1.tgz#a8096db6a56f94332d884fd8ebeda88f2fc79569"
   integrity sha512-157VNH4CngrcsvF8xOVOe22cwniIR3nxSltdctvQeHZj8JttEeOXffK28jucWfWBXs0QNetAumjc1GiInnwX4w==
