@@ -6,7 +6,7 @@ const request = axios.create({
 
 request.interceptors.request.use(config => {
   config.headers['Content-Type'] = 'application/json;charset=utf-8'
-  // config.headers['token'] = user.token
+  config.headers['token'] = localStorage.getItem("token")
   return config
 }, error => {
   return Promise.reject(error)

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import request from '@/utils/request'
 
 const routes = [
   {
@@ -38,6 +39,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to,from,next)=>{
+  request.get("/sys/menu/nav")
+    .then(res=>{
+      // 获取menuList
+      if (res.code === 200) {
+
+      }
+      // 获取权限
+    })
+  next()
 })
 
 export default router
